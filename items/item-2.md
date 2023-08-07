@@ -1,5 +1,5 @@
 ---
-itle: Item 2
+title: Item 2
 description: This is my second item
 author: Braulio Moritiaga
 date: 2023-08-06

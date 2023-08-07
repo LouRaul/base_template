@@ -1,23 +1,22 @@
-const htmlmin = require('html-minifier')
+const htmlmin = require('html-minifier');
 
-const now = String(Date.now())
+const now = String(Date.now());
 
 module.exports = function (eleventyConfig) {
-  eleventyConfig.addWatchTarget('./styles/tailwind.config.js')
-  eleventyConfig.addWatchTarget('./styles/tailwind.css')
+  eleventyConfig.addWatchTarget('./styles/tailwind.config.js');
+  eleventyConfig.addWatchTarget('./styles/tailwind.css');
 
   eleventyConfig.addShortcode('version', function () {
-    return now
-  })
- 
+    return now;
+  });
 
-  eleventyConfig.addDataExtension("yaml", (contents) => yaml.load(contents));
+  eleventyConfig.addDataExtension('yaml', (contents) => yaml.load(contents));
+  
   eleventyConfig.addPassthroughCopy({
     './node_modules/alpinejs/dist/cdn.js': './js/alpine.js',
     './src/admin/config.yml': './admin/config.yml',
-  })
-  eleventyConfig.addPassthroughCopy('.src/admin');
-  eleventyConfig.addPassthroughCopy('.src/assets');
+    './src/assets': './assets', // Corrected path for assets
+  });
 
   eleventyConfig.addTransform('htmlmin', function (content, outputPath) {
     if (
@@ -29,10 +28,10 @@ module.exports = function (eleventyConfig) {
         useShortDoctype: true,
         removeComments: true,
         collapseWhitespace: true,
-      })
-      return minified
+      });
+      return minified;
     }
 
-    return content
-  })
-}
+    return content;
+  });
+};
