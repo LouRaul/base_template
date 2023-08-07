@@ -9,8 +9,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addShortcode('version', function () {
     return now
   })
-  // Syntax Highlighting for Code blocks
-  eleventyConfig.addPlugin(syntaxHighlight);
+ 
 
   eleventyConfig.addDataExtension("yaml", (contents) => yaml.load(contents));
   eleventyConfig.addPassthroughCopy({
