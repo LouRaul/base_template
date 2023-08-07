@@ -14,8 +14,8 @@ module.exports = function (eleventyConfig) {
   
   eleventyConfig.addPassthroughCopy({
     './node_modules/alpinejs/dist/cdn.js': './js/alpine.js',
-    './src/admin/config.yml': './admin/config.yml',
-    './src/assets': './assets', // Corrected path for assets
+    './admin/config.yml': './admin/config.yml',
+    './assets': './assets',
   });
 
   eleventyConfig.addTransform('htmlmin', function (content, outputPath) {
