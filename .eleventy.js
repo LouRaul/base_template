@@ -13,6 +13,10 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({
     './node_modules/alpinejs/dist/cdn.js': './js/alpine.js',
   })
+  eleventyConfig.addPassthroughCopy(
+    '.src/admin');
+  eleventyConfig.addPassthroughCopy(
+      '.src/assets');
 
   eleventyConfig.addTransform('htmlmin', function (content, outputPath) {
     if (
