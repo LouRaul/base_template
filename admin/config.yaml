@@ -1,0 +1,19 @@
+backend:
+  name: git-gateway
+  branch: main
+madia_folder: "_site/assets/item"
+public_folder: "/assets/item"
+collections: 
+  - name: "item"
+    label: "Item"
+    folder: "src/items"
+    create: true
+    fields:
+      - { label: "Title", name: "title", widget: "string"}
+      - { label: "Description", name: "description", widget: "string"}
+      - { label: "Author", name: "author", widget: "string"}
+      - { label: "Date", name: "date", widget: "datetime"}
+      - { label: "Tags", name: "tags", widget: "list", default: ["item"]}
+      - { label: "Featured Image", name: "image", widget: "image"}
+      - { label: "Image Capture", name: "imageAlt", widget: "string"}
+      - { label: "Content", name: "content", widget: "markdown"}

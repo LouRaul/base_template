@@ -1,0 +1,20 @@
+---
+title: "it works!"
+layout: "default.html"
+---
+
+  <div class="fixed inset-0 flex justify-center items-center flex-col">
+    
+    <div>
+      <span class="text-change">Good design</span>
+    </div>
+    <div class="mt-8">
+      <h2 class="text-lg font-semibold">Website Items</h2>
+      <ul>
+        {% for item in collections.item %}
+        <li><a href="{{ item.url }}">{{ item.data.title }}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+  
