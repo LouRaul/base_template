@@ -12,12 +12,10 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addPassthroughCopy({
     './node_modules/alpinejs/dist/cdn.js': './js/alpine.js',
-    "./src/admin/config.yml": "./admin/config.yml",
-  })
-  eleventyConfig.addPassthroughCopy(
-    '.src/admin');
-  eleventyConfig.addPassthroughCopy(
-      '.src/assets');
+    './src/admin/config.yml": "./admin/config.yml'
+  });
+  eleventyConfig.addPassthroughCopy('.src/admin');
+  eleventyConfig.addPassthroughCopy('.src/assets');
 
   eleventyConfig.addTransform('htmlmin', function (content, outputPath) {
     if (
