@@ -9,11 +9,14 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addShortcode('version', function () {
     return now
   })
+  // Syntax Highlighting for Code blocks
+  eleventyConfig.addPlugin(syntaxHighlight);
+
   eleventyConfig.addDataExtension("yaml", (contents) => yaml.load(contents));
   eleventyConfig.addPassthroughCopy({
     './node_modules/alpinejs/dist/cdn.js': './js/alpine.js',
-    './src/admin/config.yml": "./admin/config.yml'
-  });
+    './src/admin/config.yml': './admin/config.yml',
+  })
   eleventyConfig.addPassthroughCopy('.src/admin');
   eleventyConfig.addPassthroughCopy('.src/assets');
 
