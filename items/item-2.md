@@ -1,5 +1,11 @@
 ---
-title: Item 2
+itle: Item 2
+description: This is my second item
+author: Braulio Moritiaga
+date: 2023-08-06
+tags: ["item", "featured"]
+image: /assets/item/item-2.jpg
+imageAlt: a funny image
 ---
 # this is item 2
 ## super useful forpeople like you

@@ -1,5 +1,12 @@
 ---
 title: item 1
+description: This is my first item
+author: Braulio Moritiaga
+date: 2023-08-06
+tags: ["item", "featured"]
+image: /assets/item/item-1.jpg
+imageAlt: an image
+
 ---
 
 # this is item 1

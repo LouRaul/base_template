@@ -1,7 +1,7 @@
 backend:
   name: git-gateway
   branch: main
-madia_folder: "_site/assets/item"
+media_folder: "_site/assets/item"
 public_folder: "/assets/item"
 collections: 
   - name: "item"
